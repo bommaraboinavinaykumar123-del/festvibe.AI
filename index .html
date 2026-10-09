@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>శ్రీ దుర్గమ్మ అమ్మవారి నవరాత్రి లడ్డు ప్రసాదం</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#250000,#650000,#210000);
+    color:white;
+    min-height:100vh;
+}
+
+/* ANIMATED BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    opacity:.35;
+    background:
+    radial-gradient(circle,#ffd700 1px,transparent 2px);
+    background-size:80px 80px;
+    animation:moveBg 12s linear infinite;
+}
+
+@keyframes moveBg{
+    from{
+        background-position:0 0;
+    }
+    to{
+        background-position:300px 500px;
+    }
+}
+
+/* INTRO */
+
+.intro{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    background:
+    linear-gradient(rgba(40,0,0,.65),rgba(20,0,0,.9)),
+    url("durgamma.jpg") center/cover;
+}
+
+.intro img{
+    width:230px;
+    height:230px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid gold;
+    box-shadow:0 0 40px gold;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 20px gold;
+    }
+    to{
+        box-shadow:0 0 60px orange;
+    }
+}
+
+.intro h1{
+    margin-top:25px;
+    color:#ffd700;
+    font-size:clamp(22px,4vw,42px);
+}
+
+.intro h2{
+    margin-top:15px;
+    color:#fff0a8;
+}
+
+.intro p{
+    max-width:850px;
+    margin-top:15px;
+    line-height:1.8;
+}
+
+button{
+    cursor:pointer;
+}
+
+.enter-btn{
+    margin-top:25px;
+    padding:14px 30px;
+    border:0;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ffd700,#ff8500);
+    color:#400000;
+    font-weight:bold;
+    font-size:17px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#320000;
+    border-bottom:1px solid gold;
+    padding:12px;
+}
+
+.nav-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    color:#ffd700;
+    font-weight:bold;
+}
+
+.nav-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.nav-buttons button{
+    padding:9px 13px;
+    border:1px solid gold;
+    background:transparent;
+    color:#ffd700;
+    border-radius:20px;
+}
+
+.nav-buttons button:hover{
+    background:gold;
+    color:#400000;
+}
+
+/* SECTIONS */
+
+section{
+    padding:60px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:#ffe7b0;
+}
+
+/* ABOUT */
+
+.about-card{
+    max-width:950px;
+    margin:auto;
+    background:rgba(20,0,0,.75);
+    border:1px solid gold;
+    padding:30px;
+    border-radius:20px;
+    line-height:1.9;
+}
+
+/* AVATARS */
+
+.avatar-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.avatar-card{
+    padding:25px;
+    text-align:center;
+    border:1px solid gold;
+    border-radius:20px;
+    background:rgba(70,0,0,.75);
+    transition:.3s;
+}
+
+.avatar-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 10px 30px rgba(255,215,0,.3);
+}
+
+.date{
+    color:#ffd700;
+    font-weight:bold;
+}
+
+.avatar-name{
+    margin:12px 0;
+    font-size:21px;
+    color:#fff1a8;
+}
+
+.avatar-card p{
+    line-height:1.6;
+    color:#ffe9c2;
+}
+
+/* BOOKING */
+
+.form-card{
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+    border:1px solid gold;
+    border-radius:20px;
+    background:rgba(20,0,0,.85);
+}
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    color:#ffd700;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:13px;
+    border-radius:10px;
+    border:1px solid #a87900;
+    background:#240000;
+    color:white;
+    outline:none;
+}
+
+.submit-btn{
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:12px;
+    background:linear-gradient(45deg,#ffd700,#ff8500);
+    color:#400000;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* PAYMENT */
+
+.payment-info{
+    display:none;
+    padding:20px;
+    margin-bottom:20px;
+    text-align:center;
+    border:1px solid gold;
+    border-radius:15px;
+}
+
+.payment-info img{
+    max-width:200px;
+    width:100%;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+/* RECEIPT */
+
+.receipt{
+    display:none;
+    max-width:500px;
+    margin:30px auto;
+    padding:25px;
+    background:#fffbea;
+    color:#4b0000;
+    border-radius:15px;
+    border:5px double #b8860b;
+}
+
+.receipt h2{
+    text-align:center;
+}
+
+.token-number{
+    text-align:center;
+    font-size:45px;
+    font-weight:bold;
+    color:#b00000;
+    margin:20px;
+}
+
+.receipt-row{
+    display:flex;
+    justify-content:space-between;
+    padding:7px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.receipt img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:20px auto;
+}
+
+/* POPUP */
+
+.popup-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.popup{
+    max-width:430px;
+    width:100%;
+    text-align:center;
+    padding:35px;
+    border:2px solid gold;
+    border-radius:25px;
+    background:linear-gradient(145deg,#720000,#250000);
+}
+
+.popup-icon{
+    font-size:60px;
+}
+
+.popup h2{
+    color:#ffd700;
+    margin:15px;
+}
+
+.popup-token{
+    font-size:50px;
+    color:#ffd700;
+    margin:15px;
+}
+
+.close-popup{
+    padding:12px 30px;
+    border:0;
+    border-radius:25px;
+    background:#ffd700;
+    color:#400000;
+    font-weight:bold;
+}
+
+/* COMMITTEE */
+
+.committee-login{
+    max-width:450px;
+    margin:auto;
+    padding:30px;
+    border:1px solid gold;
+    border-radius:20px;
+    background:rgba(20,0,0,.85);
+}
+
+.login-message{
+    text-align:center;
+    margin-top:15px;
+}
+
+.dashboard{
+    display:none;
+    margin-top:40px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.stat{
+    padding:25px;
+    text-align:center;
+    border:1px solid gold;
+    border-radius:15px;
+    background:#400505;
+}
+
+.stat h3{
+    font-size:35px;
+    color:#ffd700;
+}
+
+/* TABLE */
+
+.table-container{
+    overflow-x:auto;
+    margin-top:30px;
+}
+
+.booking-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:800px;
+    background:#250000;
+}
+
+.booking-table th,
+.booking-table td{
+    padding:12px;
+    border:1px solid #855900;
+    text-align:center;
+}
+
+.booking-table th{
+    background:#500000;
+    color:#ffd700;
+}
+
+/* TOKEN BADGE */
+
+.token-badge{
+    display:inline-block;
+    min-width:45px;
+    padding:7px 10px;
+    border-radius:20px;
+    background:#ffd700;
+    color:#450000;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    background:#150000;
+    border-top:1px solid gold;
+    color:#ffe8b0;
+}
+
+footer strong{
+    color:#ffd700;
+}
+
+/* PRINT */
+
+@media print{
+
+    body *{
+        visibility:hidden;
+    }
+
+    .receipt,
+    .receipt *{
+        visibility:visible;
+    }
+
+    .receipt{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    .nav-content{
+        flex-direction:column;
+    }
+
+    .nav-buttons{
+        justify-content:center;
+    }
+
+    .intro img{
+        width:180px;
+        height:180px;
+    }
+
+    .receipt-row{
+        font-size:14px;
+    }
+
+}
+    .team-footer {
+        text-align: center;
+        padding: 25px 10px;
+        margin-top: 40px;
+        background: #151525;
+        color: #ffd700;
+        border-top: 2px solid #ffd700;
+        font-family: Arial, sans-serif;
+    }
+
+    .team-footer p {
+        margin: 6px 0;
+        font-size: 15px;
+    }
+
+    .team-footer strong {
+        color: #ffffff;
+    }
+    .updates-container {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background: #8b0000;
+    color: white;
+    overflow: hidden;
+}
+
+.updates-title {
+    background: #ffd700;
+    color: #8b0000;
+    font-weight: bold;
+    padding: 12px 18px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.marquee-wrapper {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 18s linear infinite;
+    font-weight: 600;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+#committeeDeleteSection {
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff8e8;
+}
+
+#toggleDeleteBtn,
+.delete-person-btn {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.delete-person-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e5c9a0;
+  border-radius: 8px;
+}
+
+.delete-person-row span {
+  overflow-wrap: anywhere;
+}
+/* Download Tokens PDF Button */
+#downloadTokensPDF {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 14px 20px;
+
+  background: linear-gradient(135deg, #b71c1c, #e53935);
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+
+  cursor: pointer;
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for PC */
+#downloadTokensPDF:hover {
+  background: linear-gradient(135deg, #8e0000, #c62828);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(183, 28, 28, 0.4);
+}
+
+/* Click effect */
+#downloadTokensPDF:active {
+  transform: scale(0.97);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  #downloadTokensPDF {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+}
+</style>
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+INTRO
+===================================================== -->
+
+<div class="intro">
+
+    <img src="durgamma.jpg" alt="Durgamma">
+
+    <h1>
+      SRI SRI SRI DEVI SHARAN NAVARATHRI UTSAVAMULU KASTHALA
+    </h1>
+    <h1>
+        RAMNAGAR KANAKADURGA YOUTH 
+    </h1>
+
+    <h2>
+        శ్రీ దుర్గమ్మ అమ్మవారి నవరాత్రి లడ్డు ప్రసాదం
+    </h2>
+
+    <p>
+        అమ్మవారి నవరాత్రి మహోత్సవాలకు
+        భక్తులందరికీ హృదయపూర్వక ఆహ్వానం.
+        అమ్మవారి ఆశీస్సులతో ప్రతి కుటుంబంలో
+        సుఖశాంతులు, ఐశ్వర్యం మరియు ఆనందం కలగాలని కోరుకుంటున్నాము.
+    </p>
+
+    <button
+        class="enter-btn"
+        onclick="goTo('about')">
+
+        🙏 అమ్మవారి వివరాలు
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+<div class="nav-content">
+
+    <div class="logo">
+        <strong> శ్రీ శ్రీ శ్రీ దేవి శరణ్ నవరాత్రి ఉత్సవములు</strong> 
+    </div>
+
+    <div class="nav-buttons">
+
+        <button onclick="goTo('about')">
+            <span data-te="అమ్మవారి గురించి"
+                  data-en="About Amma">
+                అమ్మవారి గురించి
+            </span>
+        </button>
+
+        <button onclick="goTo('avatars')">
+            <span data-te="అవతారాలు"
+                  data-en="Avatars">
+                అవతారాలు
+            </span>
+        </button>
+
+        <button onclick="goTo('booking')">
+            <span data-te="టోకెన్ బుకింగ్"
+                  data-en="Token Booking">
+                టోకెన్ బుకింగ్
+            </span>
+        </button>
+
+        <button onclick="goTo('committee')">
+            <span data-te="కమిటీ Login"
+                  data-en="Committee Login">
+                కమిటీ Login
+            </span>
+        </button>
+
+        <button onclick="toggleLanguage()"
+                id="languageButton">
+
+            English
+
+        </button>
+
+    </div>
+
+</div>
+
+</nav>
+<div class="updates-container">
+    <div class="updates-title" id="updatesTitle">
+        📢 QUERY'S
+    </div>
+
+    <div class="marquee-wrapper" onmouseover="this.querySelector('.marquee-text').style.animationPlayState='paused';" onmouseout="this.querySelector('.marquee-text').style.animationPlayState='running';">
+        <div class="marquee-text" id="QUERY'S">
+            FOR ANY QUERY'S PLEASE CONTACT THE NO : 6281875174
+            &nbsp;|&nbsp;
+            ఏమైనా సందేహాలుంటే ఈ నంబర్ కు మెసేజ్ లేదా కాల్ చెయ్యండి:6281875174
+        </div>
+    </div>
+</div>
+
+
+<!-- =====================================================
+ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title"
+    data-te="🌺 అమ్మవారి గురించి 🌺"
+    data-en="🌺 About Amma 🌺">
+
+    🌺 అమ్మవారి గురించి 🌺
+
+</h2>
+
+<p class="section-subtitle"
+   data-te="శ్రీ దుర్గమ్మ అమ్మవారి నవరాత్రి మహోత్సవాలు"
+   data-en="Sri Durgamma Navaratri Celebrations">
+
+   శ్రీ దుర్గమ్మ అమ్మవారి నవరాత్రి మహోత్సవాలు
+
+</p>
+
+<div class="about-card">
+
+<p data-te="శ్రీ దుర్గమ్మ అమ్మవారు శక్తి, ధైర్యం, జ్ఞానం, ఐశ్వర్యం మరియు రక్షణకు ప్రతీకగా భక్తులచే ఆరాధించబడే దైవ స్వరూపం."
+   data-en="Sri Durgamma is worshipped as a divine embodiment of Shakti, courage, knowledge, prosperity and protection.">
+
+శ్రీ దుర్గమ్మ అమ్మవారు శక్తి, ధైర్యం, జ్ఞానం,
+ఐశ్వర్యం మరియు రక్షణకు ప్రతీకగా భక్తులచే
+ఆరాధించబడే దైవ స్వరూపం.
+
+</p>
+
+<p data-te="నవరాత్రి ఉత్సవాలలో అమ్మవారిని వివిధ దివ్య అవతారాలలో అలంకరించి ప్రత్యేక పూజలు నిర్వహిస్తారు."
+   data-en="During Navaratri, Amma is decorated in different divine forms and special prayers are performed.">
+
+నవరాత్రి ఉత్సవాలలో అమ్మవారిని వివిధ దివ్య
+అవతారాలలో అలంకరించి ప్రత్యేక పూజలు నిర్వహిస్తారు.
+
+</p>
+
+<p data-te="భక్తుల సౌకర్యార్థం లడ్డు ప్రసాదం కోసం ఈ Token Management System రూపొందించబడింది."
+   data-en="This Token Management System has been created to make laddu prasadam distribution convenient for devotees.">
+
+భక్తుల సౌకర్యార్థం లడ్డు ప్రసాదం కోసం
+ఈ Token Management System రూపొందించబడింది.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+AVATARS
+===================================================== -->
+
+<section id="avatars">
+
+<div class="container">
+
+<h2 class="section-title">
+
+🌸 అక్టోబర్ 11 – 20 అమ్మవారి దివ్య అవతారాలు 🌸
+
+</h2>
+
+<div class="avatar-grid">
+
+<div class="avatar-card">
+<div class="date">October 11 – Sunday</div>
+<div class="avatar-name">Bala Tripurasundari Devi</div>
+<p>
+బాలా త్రిపురసుందరి దేవి జ్ఞానం మరియు
+దైవిక శక్తికి ప్రతీక.
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 12 – Monday</div>
+<div class="avatar-name">Gayatri Devi</div>
+<p>
+గాయత్రీ దేవి జ్ఞానం మరియు ఆధ్యాత్మిక
+ప్రకాశానికి ప్రతీక.
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 13 – Tuesday</div>
+<div class="avatar-name">Annapurna Devi</div>
+<p>
+అన్నపూర్ణ దేవి అన్నదానం మరియు
+సమృద్ధికి ప్రతీక.
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 14 – Wednesday</div>
+<div class="avatar-name">Meenakshi Devi</div>
+<p>
+మీనాక్షి దేవి శక్తి మరియు కరుణకు ప్రతీక.
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 15 – Thursday</div>
+<div class="avatar-name">Lalitha Tripurasundari Devi</div>
+<p>
+లలితా త్రిపురసుందరి దేవి పరాశక్తి స్వరూపం.
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 16 – Friday</div>
+<div class="avatar-name">Saraswati Devi</div>
+<p>
+సరస్వతి దేవి విద్య, జ్ఞానం మరియు కళలకు అధిదేవత.
+<br>
+⭐ Moola Nakshatram
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 17 – Saturday</div>
+<div class="avatar-name">Mahalakshmi Devi</div>
+<p>
+మహాలక్ష్మీ దేవి సంపద మరియు ఐశ్వర్యానికి ప్రతీక.
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 18 – Sunday</div>
+<div class="avatar-name">Durga Devi</div>
+<p>
+దుర్గా దేవి అధర్మంపై ధర్మ విజయానికి ప్రతీక.
+<br>
+🔱 Durgashtami
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 19 – Monday</div>
+<div class="avatar-name">Mahishasuramardini Devi</div>
+<p>
+మహిషాసురమర్దిని దేవి అధర్మంపై ధర్మ విజయాన్ని సూచిస్తుంది.
+<br>
+⚔️ Mahanavami
+</p>
+</div>
+
+<div class="avatar-card">
+<div class="date">October 20 – Tuesday</div>
+<div class="avatar-name">Rajarajeshwari Devi</div>
+<p>
+రాజరాజేశ్వరి దేవి పరిపూర్ణ దైవిక శక్తి మరియు విజయానికి ప్రతీక.
+<br>
+🏆 Vijayadashami
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+BOOKING
+===================================================== -->
+
+<section id="booking">
+
+<div class="container">
+
+<h2 class="section-title"
+    data-te="🪔 లడ్డు ప్రసాదం టోకెన్ బుకింగ్"
+    data-en="🪔 Laddu Prasadam Token Booking">
+
+🪔 లడ్డు ప్రసాదం టోకెన్ బుకింగ్
+
+</h2>
+
+<div class="form-card">
+
+<form id="bookingForm">
+
+<div class="form-group">
+
+<label data-te="పేరు"
+       data-en="Name">
+
+పేరు
+
+</label>
+
+<input
+type="text"
+id="name"
+required
+placeholder="name">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-te="ఇంటి పేరు"
+       data-en="Surname">
+
+ఇంటి పేరు
+
+</label>
+
+<input
+type="text"
+id="surname"
+required placeholder="surname">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-te=" మొబైల్ నంబర్  "
+       data-en="mobile number"> 
+ మొబైల్ నంబర్ 
+
+</label>
+
+<input
+type="tel"
+id="phone-no"
+required placeholder="phone-no">
+
+</div>
+<div class="form-group">
+
+<label data-te=" తండ్రి పేరు "
+       data-en="Father name ">
+
+తండ్రి పేరు 
+
+</label>
+
+<input
+type="text"
+id="fatherName"
+required placeholder="father-name">
+
+</div>
+
+<div class="form-group">
+
+<label data-te="గ్రామం"
+       data-en="Village">
+
+గ్రామం
+
+</label>
+
+<input
+type="text"
+id="village"
+required placeholder="village">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-te="మండలం"
+       data-en="Mandal">
+
+మండలం
+
+</label>
+
+<input
+type="text"
+id="mandal"
+required placeholder="mandal">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-te="జిల్లా"
+       data-en="District">
+
+జిల్లా
+
+</label>
+
+<input
+type="text"
+id="district"
+required placeholder="district">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-te="Payment Method"
+       data-en="Payment Method">
+
+Payment Method
+
+</label>
+
+<select id="paymentMethod" required>
+
+<option value="">
+Select Payment Method
+</option>
+
+<option value="Online">
+Online Payment
+</option>
+
+<option value="Cash">
+Offline / Cash
+</option>
+
+</select>
+
+</div>
+
+
+<!-- ONLINE -->
+
+<div
+class="payment-info"
+id="onlinePayment">
+
+<h3>
+📱 Online Payment
+</h3>
+
+<p>
+Scan the QR code and complete payment.
+</p>
+
+<img
+src="./qrcode.jpg"
+alt="UPI QR Code">
+
+</div>
+
+
+<!-- CASH -->
+
+<div
+class="payment-info"
+id="cashPayment">
+
+<h3>
+💵 Cash Payment
+</h3>
+
+<p>
+Please pay at the designated counter.
+</p>
+
+</div>
+
+
+<button
+type="submit"
+class="submit-btn">
+
+🙏 Submit Booking
+
+</button>
+
+</form>
+
+</div>
+
+
+<!-- RECEIPT -->
+
+<div
+class="receipt"
+id="receipt">
+
+<h2>
+శ్రీ దుర్గమ్మ అమ్మవారి నవరాత్రి
+</h2>
+
+<hr>
+
+<div class="token-number">
+
+Token:
+<span id="receiptToken">
+1
+</span>
+
+</div>
+
+<div class="receipt-row">
+<strong>Name</strong>
+<span id="receiptName"></span>
+</div>
+
+<div class="receipt-row">
+<strong>Surname</strong>
+<span id="receiptSurname"></span>
+</div>
+
+<div class="receipt-row">
+<strong>Father Name</strong>
+<span id="receiptFather"></span>
+</div>
+
+<div class="receipt-row">
+<strong>Village</strong>
+<span id="receiptVillage"></span>
+</div>
+
+<div class="receipt-row">
+<strong>Mandal</strong>
+<span id="receiptMandal"></span>
+</div>
+
+<div class="receipt-row">
+<strong>District</strong>
+<span id="receiptDistrict"></span>
+</div>
+
+<div class="receipt-row">
+<strong>Payment</strong>
+<span id="receiptPayment"></span>
+</div>
+
+<div class="receipt-row">
+<strong>Date</strong>
+<span id="receiptDate"></span>
+</div>
+
+<img src="durgamma.jpg">
+
+<p style="text-align:center">
+
+🙏 అమ్మవారి ఆశీస్సులు మీ కుటుంబంపై ఉండాలని కోరుకుంటున్నాము 🙏
+
+</p>
+
+<br>
+
+<button
+class="submit-btn"
+onclick="window.print()">
+
+🖨️ Print / Save Receipt
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+COMMITTEE LOGIN
+===================================================== -->
+
+<section id="committee">
+
+<div class="container">
+
+<h2 class="section-title">
+🔐 Committee Login
+</h2>
+
+<div class="committee-login">
+
+<div class="form-group">
+
+<label>
+Username
+</label>
+
+<input
+type="text"
+id="committeeUsername"
+placeholder="Committee Username">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Password
+</label>
+
+<input
+type="password"
+id="committeePassword"
+placeholder="Password">
+
+</div>
+
+
+<button
+class="submit-btn"
+onclick="committeeLogin()">
+
+🔐 Login
+
+</button>
+
+
+<div
+class="login-message"
+id="loginMessage">
+</div>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div
+class="dashboard"
+id="dashboard">
+
+<h2 class="section-title">
+📊 Committee Dashboard
+</h2>
+
+
+<div class="stats">
+
+<div class="stat">
+
+<h3 id="totalBookings">
+0
+</h3>
+
+<p>
+Total Bookings
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3 id="onlineBookings">
+0
+</h3>
+
+<p>
+Online Payments
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3 id="cashBookings">
+0
+</h3>
+
+<p>
+Cash Payments
+</p>
+
+</div>
+
+</div>
+
+
+<div class="table-container">
+
+<table class="booking-table">
+
+<thead>
+
+<tr>
+
+<th>
+Sequence
+</th>
+
+<th>
+Token
+</th>
+
+<th>
+Name
+</th>
+
+<th>
+Father Name
+</th>
+
+<th>
+Village
+</th>
+
+<th>
+Mandal
+</th>
+
+<th>
+District
+</th>
+
+<th>
+Payment
+</th>
+
+<th>
+Date & Time
+</th>
+
+</tr>
+
+</thead>
+
+<button id="downloadTokensPDF" onclick="downloadAllTokensPDF()">
+  📥 Download All Tokens (PDF)
+</button>
+
+<tbody
+id="bookingTableBody">
+
+</tbody>
+<div id="committeeDeleteSection" style="display:none;">
+  <h3>Manage Bookings</h3>
+  <button id="toggleDeleteBtn" type="button">
+    Delete Names
+  </button>
+  <div id="deleteNamesList"></div>
+</div>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================================
+SUCCESS POPUP
+===================================================== -->
+
+<div
+class="popup-overlay"
+id="successPopup">
+
+<div class="popup">
+
+<div class="popup-icon">
+🙏
+</div>
+
+<h2>
+Booking Successful!
+</h2>
+
+<p>
+Your Laddu Prasadam Token Number
+</p>
+
+<div
+class="popup-token"
+id="popupToken">
+
+1
+
+</div>
+
+<p>
+Please keep this token number safely.
+</p>
+
+<button
+class="close-popup"
+onclick="closePopup()">
+
+Continue
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<strong>
+🪔 శ్రీ దుర్గమ్మ అమ్మవారి నవరాత్రి ఉత్సవాలు 🪔
+</strong>
+
+<br><br>
+
+__SRI SRI SRI DEVI SHARAN NAVARATHRI UTSAVAMULU KASTHALA__
+
+<br><br>
+
+🙏 JAI BHAVANI JAI JAI BHAVANI🙏
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+LANGUAGE SWITCH
+===================================================== */
+const updates = {
+    te: {
+        title: "📢 నోటీస్",
+        text: `
+        ఏమైనా సందేహాలుంటే ఈ నంబర్ కు మెసేజ్ లేదా కాల్ చెయ్యండి:6281875174
+        `
+    },
+
+    en: {
+        title: "📢 QUERY'S",
+        text: `
+        FOR ANY QUERY'S PLEASE CONTACT THE NUMBER : 6281875174
+        `
+    }
+};
+
+function changeLanguage(language) {
+    document.getElementById("updatesTitle").innerHTML =
+        updates[language].title;
+
+    document.getElementById("dailyUpdates").innerHTML =
+        updates[language].text;
+}
+let currentLanguage = "te";
+
+function toggleLanguage(){
+
+    currentLanguage =
+        currentLanguage === "te"
+        ? "en"
+        : "te";
+
+    const elements =
+        document.querySelectorAll("[data-te]");
+
+    elements.forEach(function(element){
+
+        element.textContent =
+            element.getAttribute(
+                "data-" + currentLanguage
+            );
+
+    });
+
+    const button =
+        document.getElementById("languageButton");
+
+    if(currentLanguage === "te"){
+
+        button.textContent = "English";
+
+    }else{
+
+        button.textContent = "తెలుగు";
+
+    }
+
+}
+
+
+/* =====================================================
+NAVIGATION
+===================================================== */
+
+function goTo(id){
+
+    document
+    .getElementById(id)
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+PAYMENT
+===================================================== */
+
+document
+.getElementById("paymentMethod")
+.addEventListener("change",function(){
+
+    document
+    .getElementById("onlinePayment")
+    .style.display="none";
+
+    document
+    .getElementById("cashPayment")
+    .style.display="none";
+
+
+    if(this.value==="Online"){
+
+        document
+        .getElementById("onlinePayment")
+        .style.display="block";
+
+    }
+
+
+    if(this.value==="Cash"){
+
+        document
+        .getElementById("cashPayment")
+        .style.display="block";
+
+    }
+
+});
+
+
+/* =====================================================
+GET BOOKINGS
+===================================================== */
+
+function getBookings(){
+
+    return JSON.parse(
+        localStorage.getItem(
+            "durgammaBookings"
+        ) || "[]"
+    );
+
+}
+
+
+/* =====================================================
+SAVE BOOKINGS
+===================================================== */
+
+function saveBookings(bookings){
+
+    localStorage.setItem(
+        "durgammaBookings",
+        JSON.stringify(bookings)
+    );
+
+}
+
+
+/* =====================================================
+NEXT SEQUENTIAL TOKEN
+===================================================== */
+
+function getNextToken(){
+
+    const bookings =
+        getBookings();
+
+    /*
+       First booking = 1
+       Second booking = 2
+       Third booking = 3
+       ...
+    */
+
+    return bookings.length + 1;
+
+}
+
+
+/* =====================================================
+BOOKING SUBMIT
+===================================================== */
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit",function(event){
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("name")
+        .value.trim();
+
+    const surname =
+        document.getElementById("surname")
+        .value.trim();
+
+    const fatherName =
+        document.getElementById("fatherName")
+        .value.trim();
+
+    const village =
+        document.getElementById("village")
+        .value.trim();
+
+    const mandal =
+        document.getElementById("mandal")
+        .value.trim();
+
+    const district =
+        document.getElementById("district")
+        .value.trim();
+
+    const payment =
+        document.getElementById("paymentMethod")
+        .value;
+
+
+    if(!payment){
+
+        alert(
+            currentLanguage==="te"
+            ? "దయచేసి Payment Method ఎంచుకోండి."
+            : "Please select a payment method."
+        );
+
+        return;
+
+    }
+
+
+    /* GET NEXT NUMBER */
+
+    const token =
+        getNextToken();
+
+
+    const now =
+        new Date();
+
+
+    /* CREATE BOOKING */
+
+    const booking = {
+
+        sequence: token,
+
+        token: token,
+
+        name:name,
+
+        surname:surname,
+
+        fatherName:fatherName,
+
+        village:village,
+
+        mandal:mandal,
+
+        district:district,
+
+        payment:payment,
+
+        date:
+            now.toLocaleDateString(
+                "en-IN"
+            ),
+
+        time:
+            now.toLocaleTimeString(
+                "en-IN"
+            ),
+
+        createdAt:
+            now.getTime()
+
+    };
+
+
+    /* GET EXISTING */
+
+    const bookings =
+        getBookings();
+
+
+    /* ADD AT END */
+
+    bookings.push(booking);
+
+
+    /* SAVE */
+
+    saveBookings(bookings);
+
+
+    /* =================================================
+       RECEIPT
+    ================================================= */
+
+    document
+    .getElementById("receiptToken")
+    .textContent = token;
+
+    document
+    .getElementById("receiptName")
+    .textContent = name;
+
+    document
+    .getElementById("receiptSurname")
+    .textContent = surname;
+
+    document
+    .getElementById("receiptFather")
+    .textContent = fatherName;
+
+    document
+    .getElementById("receiptVillage")
+    .textContent = village;
+
+    document
+    .getElementById("receiptMandal")
+    .textContent = mandal;
+
+    document
+    .getElementById("receiptDistrict")
+    .textContent = district;
+
+    document
+    .getElementById("receiptPayment")
+    .textContent = payment;
+
+    document
+    .getElementById("receiptDate")
+    .textContent =
+        booking.date +
+        " " +
+        booking.time;
+
+
+    document
+    .getElementById("receipt")
+    .style.display = "block";
+
+
+    /* =================================================
+       SUCCESS POPUP
+    ================================================= */
+
+    document
+    .getElementById("popupToken")
+    .textContent = token;
+
+    document
+    .getElementById("successPopup")
+    .style.display = "flex";
+
+
+    /* RESET FORM */
+
+    this.reset();
+
+    document
+    .getElementById("onlinePayment")
+    .style.display="none";
+
+    document
+    .getElementById("cashPayment")
+    .style.display="none";
+
+});
+
+
+/* =====================================================
+CLOSE POPUP
+===================================================== */
+
+function closePopup(){
+
+    document
+    .getElementById("successPopup")
+    .style.display="none";
+
+    document
+    .getElementById("receipt")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+COMMITTEE LOGIN
+===================================================== */
+
+/*
+   DEMO LOGIN
+
+   Username:
+   committee
+
+   Password:
+   durgamma123
+
+*/
+
+function committeeLogin(){
+
+    const username =
+        document
+        .getElementById(
+            "committeeUsername"
+        )
+        .value.trim();
+
+
+    const password =
+        document
+        .getElementById(
+            "committeePassword"
+        )
+        .value;
+
+
+    const message =
+        document
+        .getElementById(
+            "loginMessage"
+        );
+
+
+    if(
+        username === "committee" &&
+        password === "durgamma123"
+    ){
+
+        message.style.color="#7CFF7C";
+
+        message.textContent =
+            "Login successful!";
+
+
+        document
+        .getElementById(
+            "dashboard"
+        )
+        .style.display="block";
+
+
+        loadDashboard();
+
+
+    }else{
+
+        message.style.color="#ff7777";
+
+        message.textContent =
+            "Invalid username or password.";
+
+        document
+        .getElementById(
+            "dashboard"
+        )
+        .style.display="none";
+
+    }
+
+}
+
+
+/* =====================================================
+COMMITTEE DASHBOARD
+===================================================== */
+
+function loadDashboard(){
+
+    const bookings =
+        getBookings();
+
+
+    /*
+       IMPORTANT:
+
+       Sort by sequence number.
+       Therefore:
+
+       1
+       2
+       3
+       4
+       ...
+       N
+    */
+
+    bookings.sort(function(a,b){
+
+        return a.sequence - b.sequence;
+
+    });
+
+
+    /* TOTAL */
+
+    document
+    .getElementById(
+        "totalBookings"
+    )
+    .textContent =
+        bookings.length;
+
+
+    /* ONLINE */
+
+    const online =
+        bookings.filter(function(booking){
+
+            return booking.payment === "Online";
+
+        }).length;
+
+
+    /* CASH */
+
+    const cash =
+        bookings.filter(function(booking){
+
+            return booking.payment === "Cash";
+
+        }).length;
+
+
+    document
+    .getElementById(
+        "onlineBookings"
+    )
+    .textContent = online;
+
+
+    document
+    .getElementById(
+        "cashBookings"
+    )
+    .textContent = cash;
+
+
+    /* TABLE */
+
+    const table =
+        document
+        .getElementById(
+            "bookingTableBody"
+        );
+
+
+    table.innerHTML="";
+
+
+    bookings.forEach(function(booking,index){
+
+        const row =
+            document.createElement("tr");
+
+
+        row.innerHTML = `
+
+        <td>
+            ${index + 1}
+        </td>
+
+        <td>
+            <span class="token-badge">
+                ${booking.token}
+            </span>
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.name
+            )}
+            ${escapeHTML(
+                booking.surname
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.fatherName
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.village
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.mandal
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.district
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.payment
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                booking.date
+            )}
+            <br>
+            ${escapeHTML(
+                booking.time
+            )}
+        </td>
+
+        `;
+
+
+        table.appendChild(row);
+
+    });
+
+}
+
+
+/* =====================================================
+SECURITY
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+const albumSlides = document.getElementById("navaratriSlides");
+const albumDots = document.getElementById("sliderDots");
+
+let currentPhoto = 0;
+const totalPhotos = 5;
+let autoSwipe;
+
+for (let i = 0; i < totalPhotos; i++) {
+  const dot = document.createElement("button");
+  dot.type = "button";
+  dot.setAttribute("aria-label", `Show photo ${i + 1}`);
+
+  dot.addEventListener("click", () => {
+    showPhoto(i);
+    restartAutoSwipe();
+  });
+
+  albumDots.appendChild(dot);
+}
+
+function showPhoto(index) {
+  currentPhoto = (index + totalPhotos) % totalPhotos;
+
+  albumSlides.style.transform =
+    `translateX(-${currentPhoto * 100}%)`;
+
+  [...albumDots.children].forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentPhoto);
+  });
+}
+
+function moveSlide(direction) {
+  showPhoto(currentPhoto + direction);
+  restartAutoSwipe();
+}
+
+function restartAutoSwipe() {
+  clearInterval(autoSwipe);
+  autoSwipe = setInterval(() => {
+    showPhoto(currentPhoto + 1);
+  }, 3000);
+}
+
+showPhoto(0);
+restartAutoSwipe();
+
+// Pause while the user touches the album
+const photoSlider = document.querySelector(".slider");
+
+photoSlider.addEventListener("mouseenter", () => {
+  clearInterval(autoSwipe);
+});
+
+photoSlider.addEventListener("mouseleave", restartAutoSwipe);
+
+photoSlider.addEventListener("touchstart", () => {
+  clearInterval(autoSwipe);
+}, { passive: true });
+
+photoSlider.addEventListener("touchend", restartAutoSwipe, {
+  passive: true
+});
+
+let deleteMode = false;
+
+const deleteSection =
+  document.getElementById("committeeDeleteSection");
+
+const deleteToggle =
+  document.getElementById("toggleDeleteBtn");
+
+const deleteList =
+  document.getElementById("deleteNamesList");
+
+// Call after successful committee login only.
+function showCommitteeDeleteFeature() {
+  deleteSection.style.display = "block";
+}
+
+function getBookings() {
+  return JSON.parse(localStorage.getItem("bookings") || "[]");
+}
+
+function saveBookings(bookings) {
+  localStorage.setItem("bookings", JSON.stringify(bookings));
+}
+
+deleteToggle.addEventListener("click", () => {
+  deleteMode = !deleteMode;
+
+  deleteToggle.textContent = deleteMode
+    ? "Cancel Delete"
+    : "Delete Names";
+
+  renderDeleteNames();
+});
+
+function renderDeleteNames() {
+  deleteList.replaceChildren();
+
+  if (!deleteMode) return;
+
+  const bookings = getBookings();
+
+  bookings.forEach((person, index) => {
+    const row = document.createElement("div");
+    row.className = "delete-person-row";
+
+    const name = document.createElement("span");
+    name.textContent =
+      `Token ${index + 1} — ${person.name || "Unnamed"}`;
+
+    const button = document.createElement("button");
+    button.className = "delete-person-btn";
+    button.textContent = "Delete";
+
+    button.addEventListener("click", () => {
+      const confirmed = confirm(
+        `Are you sure you want to delete ${
+          person.name || "this booking"
+        }?`
+      );
+
+      if (!confirmed) return;
+
+      const current = getBookings();
+      const position = current.findIndex(
+        item => item.id === person.id
+      );
+
+      if (position === -1) {
+        alert("Booking not found. Refresh and try again.");
+        return;
+      }
+
+      current.splice(position, 1);
+
+      // Update the remaining token sequence.
+      current.forEach((item, i) => {
+        item.tokenNumber = i + 1;
+      });
+
+      saveBookings(current);
+
+      renderDeleteNames();
+
+      // Refresh your existing booking list/count here.
+      alert("Booking deleted successfully!");
+    });
+
+    row.append(name, button);
+    deleteList.appendChild(row);
+  });
+}
+showCommitteeDeleteFeature();
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+async function downloadAllTokensPDF() {
+  const bookings = JSON.parse(
+    localStorage.getItem("bookings") || "[]"
+  );
+
+  if (!bookings.length) {
+    alert("No bookings available.");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+
+  // A4 page: 210 × 297 mm
+  const pdf = new jsPDF({
+    orientation: "portrait",
+    unit: "mm",
+    format: "a4"
+  });
+
+  const tokenW = 100;
+  const tokenH = 100;
+  const gapX = 4;
+  const gapY = 4;
+  const startX = 3;
+  const startY = 3;
+
+  // 2 columns × 4 rows = 8 tokens per page
+  bookings.forEach((person, index) => {
+    const pageIndex = Math.floor(index / 8);
+
+    if (index > 0 && index % 8 === 0) {
+      pdf.addPage();
+    }
+
+    const position = index % 8;
+    const col = position % 2;
+    const row = Math.floor(position / 2);
+
+    const x = startX + col * (tokenW + gapX);
+    const y = startY + row * (tokenH + gapY);
+
+    // Token border
+    pdf.setDrawColor(180, 115, 15);
+    pdf.setLineWidth(0.8);
+    pdf.rect(x, y, tokenW, tokenH);
+
+    pdf.setDrawColor(180, 20, 20);
+    pdf.setLineWidth(0.3);
+    pdf.rect(x + 2, y + 2, tokenW - 4, tokenH - 4);
+
+    // Header
+    pdf.setTextColor(150, 15, 15);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(10);
+
+    pdf.text(
+      "SRI SRI SRI DEVI SHARAN",
+      x + 50,
+      y + 10,
+      { align: "center" }
+    );
+
+    pdf.setFontSize(9);
+    pdf.text(
+      "NAVARATHRI UTSAVAMULU KASTHALA",
+      x + 50,
+      y + 16,
+      { align: "center" }
+    );
+
+    // Token number
+    pdf.setFontSize(14);
+    pdf.text(
+      "TOKEN NO: " + (index + 1),
+      x + 50,
+      y + 32,
+      { align: "center" }
+    );
+
+    // Booking details
+    pdf.setTextColor(30, 30, 30);
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(10);
+
+    const details = [
+      ["Name", person.name || ""],
+      ["Village", person.village || ""],
+      ["Mandal", person.mandal || ""],
+      ["District", person.district || ""]
+    ];
+
+    details.forEach((detail, i) => {
+      const yy = y + 45 + i * 10;
+
+      pdf.setFont("helvetica", "bold");
+      pdf.text(detail[0] + ":", x + 6, yy);
+
+      pdf.setFont("helvetica", "normal");
+
+      const value = pdf.splitTextToSize(
+        String(detail[1]),
+        65
+      );
+
+      pdf.text(value[0] || "", x + 29, yy);
+    });
+
+    // Footer
+    pdf.setTextColor(150, 15, 15);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(10);
+
+    pdf.text(
+      "Jai Durga Maa",
+      x + 50,
+      y + 91,
+      { align: "center" }
+    );
+  });
+
+  pdf.save("Durga_Amma_Tokens.pdf");
+}
+</script>
+<!-- Developing Team Footer -->
+<footer class="team-footer">
+    <p>🚀 Developed by <strong>Team SRYT TECHNOLOGIES</strong></p>
+    <p>© 2026 | All Rights Reserved</p>
+</footer>
+<!-- Supabase library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script>
+  const SUPABASE_URL = "https://brzxwizoowqyjhiopsay.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_iZxSeRjd2VWgsQJTtqLs5Q_8ts_j8eJ";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  console.log("Supabase connection client ready!");
+</script>
+</body>
+</html>
